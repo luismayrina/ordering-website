@@ -1,0 +1,37 @@
+/* CREATES RED LINK */
+
+.btn-red{ 
+  color: #fff;
+  background-color:#A3272F;
+  border: 0px;
+}
+
+.btn-red:hover{ 
+  color: #fff;
+  background-color: #942029;
+} 
+
+.link-red{ 
+  display: block;
+  color: #A3272F;
+  text-decoration: none; 
+}
+
+.link-red:hover{ 
+  color: #440f13;
+} 
+
+/* LOG IN ERROR MESSAGE CSS */
+.error-message { 
+background-color:rgba(250, 243, 245, 1);
+border: 1px solid #a3272f18;
+padding: 10px;
+margin-bottom: 30px;
+color: #a3272f;
+
+align-items: center;
+}
+
+.error-icon {
+margin-right: 5px;
+}

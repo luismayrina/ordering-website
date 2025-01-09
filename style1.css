@@ -1,0 +1,561 @@
+@font-face { 
+  font-family : "Roboto-Regular"; 
+  src : url("fonts/Roboto-Regular.ttf") format("truetype"); 
+  font-family: "Roboto-Bold"; 
+  src : url("fonts/Roboto-Black.ttf") format("truetype"); 
+  font-family: "Dosis-Regular"; 
+  src : url("fonts/Dosis-Regular.ttf") format("truetype");
+     }  
+     
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+a.badge:hover, a.badge:focus {
+  text-decoration: none;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #f4623a;
+}
+a.badge-primary:hover, a.badge-primary:focus {
+  color: #fff;
+  background-color: #ee3e0d;
+}
+a.badge-primary:focus, a.badge-primary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(244, 98, 58, 0.5);
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+a.badge-secondary:hover, a.badge-secondary:focus {
+  color: #fff;
+  background-color: #545b62;
+}
+a.badge-secondary:focus, a.badge-secondary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #28a745;
+}
+a.badge-success:hover, a.badge-success:focus {
+  color: #fff;
+  background-color: #1e7e34;
+}
+a.badge-success:focus, a.badge-success.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.badge-info {
+  color: #fff;
+  background-color: #17a2b8;
+}
+a.badge-info:hover, a.badge-info:focus {
+  color: #fff;
+  background-color: #117a8b;
+}
+a.badge-info:focus, a.badge-info.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+a.badge-warning:hover, a.badge-warning:focus {
+  color: #212529;
+  background-color: #d39e00;
+}
+a.badge-warning:focus, a.badge-warning.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #dc3545;
+}
+a.badge-danger:hover, a.badge-danger:focus {
+  color: #fff;
+  background-color: #bd2130;
+}
+a.badge-danger:focus, a.badge-danger.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+a.badge-light:hover, a.badge-light:focus {
+  color: #212529;
+  background-color: #dae0e5;
+}
+a.badge-light:focus, a.badge-light.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.badge-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+a.badge-dark:hover, a.badge-dark:focus {
+  color: #fff;
+  background-color: #1d2124;
+}
+a.badge-dark:focus, a.badge-dark.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+} 
+
+
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+} 
+
+.btn-red:hover{ 
+  color: #fff;
+  background-color: #942029;
+}
+.align-center { 
+  margin: 0 auto; 
+} 
+
+.darkened-image { 
+  filter: brightness(50%);
+}
+.div1 {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  
+  margin-top:  100px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+.nav-bar { 
+margin-bottom : px; 
+padding-top : 10px; 
+padding-bottom : 44px; 
+} 
+
+a { 
+font-family: 'Dosis'; 
+ } 
+
+p {
+  font-family: 'Dosis'; 
+}
+
+
+
+.card-size { 
+width : 315px !important;
+height: 225px !important; 
+ }
+
+.color-darkk { 
+background-color: #1B1919 !important; 
+ } 
+ 
+ .color-lightt { 
+background-color: #fcfcfc !important; 
+ } 
+.dark-hover { 
+color: #0d6efd;
+text-decoration:  none; 
+ } 
+
+ .dark-hover:hover { 
+color:  black;
+  }
+
+
+
+.font-dosis { 
+font-family: 'Dosis', sans-serif;
+ } 
+
+.font-roboto{ 
+font-family:  'Roboto-Regular', sans-serif; 
+ }
+
+.font-roboto1 { 
+font-family: 'Roboto-Regular';
+ } 
+
+ h1 { 
+font-family: "Dosis-Regular", sans-serif;
+  } 
+
+.img{ 
+background-blend-mode: lighten; 
+width:  120% ; 
+height:  550px; 
+object-fit: cover;
+ } 
+
+.imagee {
+    position: relative !important;
+    width: 400px !important;
+}
+
+.image__img {
+    display: block !important;
+    width: 100% !important ;
+}
+.image__overlayy {
+  position: absolute !important ;
+  top: 0 !important ;
+  left: 0;
+  width: 100% !important ;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #ffffff !important;
+  font-family: 'Quicksand', sans-serif !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important; 
+}
+.image__overlay {
+    position: absolute !important ;
+    top: 0 !important ;
+    left: 0;
+    width: 100% !important ;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    color: #ffffff !important;
+    font-family: 'Quicksand', sans-serif !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0 !important;
+    transition: opacity 0.25s !important;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px) !important;
+}
+
+
+.image__overlay > * {
+    transform: translateY(20px) !important;
+    transition: transform 0.25s !important;
+}
+
+.image__overlay:hover {
+    opacity: 1 !important;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0) !important;
+}
+
+.image__title {
+    font-size: 2em !important;
+    font-weight: bold !important;
+}
+
+.image__description {
+    font-size: 1.25em !important;
+    margin-top: 0.25em !important;
+}
+
+
+
+.label-light { 
+color:  #ffffff !important;
+}
+
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+} 
+
+p{ 
+
+font-family:  Roboto-Bold;
+color: #ffffff !important;
+  }
+
+.red-hover{ 
+  background-color:#A3272F;
+}
+
+.red-hover:hover{ 
+  background-color: #440f13;
+}
+.text-red{ 
+  color:#A3272F;
+} 
+
+/* SIDEBAR CSS */ 
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  font-size: 1rem !important;
+  font-family: 'Dosis'; 
+
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1rem; 
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+ 
+} 
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#side { 
+  transition: margin-left .5s;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  
+} 
+
+.carousell {
+  background: #fff;
+}
+
+.carousell-cell {
+  width: 20%;
+  height: 300px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousell-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 300px;
+  font-size: 80px;
+  color: white;
+}
+
+/* zoom hover */
+.thumbnail_item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.thumbnail_item img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.thumbnail_item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+} 
+/*zoom hover*/
+
+/* FAVORITE BUTTON */
+.fave { 
+  
+    position: absolute;
+    top: 8%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  
+}
+
+/* FAVORITE BUTTON FILLED */
+.hover_fave{ 
+  position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+   display:none;
+} 
+
+/* FAVORITE BUTTON HOVER */
+.favee:hover .hover_fave{ 
+  display:inline;
+}
+
+ 
+
+   /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
