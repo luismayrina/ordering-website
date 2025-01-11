@@ -36,7 +36,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['User'])){
 
     <body style = "background-color : #A3272F"> 
       
-      <h1 class="h1 mt-5 mb-4 fw-normal text-light text-center">CANTEEN ORDERING SYSTEM</h1> 
+      <h1 class="h1 mt-5 mb-4 fw-normal text-light text-center"><b>CANTEEN ORDERING SYSTEM</b></h1> 
 
 
   

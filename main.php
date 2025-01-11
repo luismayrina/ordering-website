@@ -34,7 +34,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['User'])){
 
     
 
-    <body style = "background-color : #ffffff"> 
+    <body style = "background-color : #ffffff; margin-bottom: -30px;"> 
    
     <?php
       include_once 'header.php';
@@ -241,9 +241,7 @@ if (isset($_SESSION['ID']) && isset($_SESSION['User'])){
       </div> 
 
       <?php include('footer.php') ?>
-
-
-
+      
     </body>
 
     </html>

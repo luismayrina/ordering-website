@@ -80,7 +80,7 @@ $('#myModal').on('shown.bs.modal', function () {
      $all_res=$con->query($sql);
      $row=mysqli_fetch_assoc($all_res);
     ?>
-     <img src="assets/images/<?php echo $row["img_path2"]; ?>" style = "max-height: 300px;" id = "banner" class="hero-carousel__cell d-block w-100" alt="...">
+     <img src="assets/images/<?php echo $row["img_path2"]; ?>" style = "max-height: 400px;" id = "banner" class=" hero-carousel__cell d-block w-100" alt="...">
       
     </div>
     
@@ -94,7 +94,7 @@ $('#myModal').on('shown.bs.modal', function () {
     </header>
 
     
-    <header class="pb-3 mb-4 border-bottom">
+    
     <?php
       // Retrieve the categories for a restaurant
       $restaurant = 'Turks';
@@ -103,23 +103,18 @@ $('#myModal').on('shown.bs.modal', function () {
       // Display the categories as links
       while ($row = $categories->fetch_assoc()) {
         $category = $row['category'];  
-        echo '<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <span class="font-dosis text-dark fs-3 "><i class="fa-solid fa-fire"></i>'.$row['category'].'</span> <!-- Category name-->
+        echo '<header class="pb-3 mb-4 border-bottom"><a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="font-dosis text-dark fs-3 "><i class="fa-solid fa-fire"></i>'.' '.$row['category'].'</span> <!-- Category name-->
       </a> 
       ';
       
       echo '<div class="album py-4 row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" >';
       include ('db_conn.php'); 
               $qry = $con->query("SELECT * FROM  product_list WHERE restaurant = 'Turks' AND category='$category' AND avl='1' order by product_id ASC"); // Search for items in the product_list that includes the restaurant name "Turks"
-              while($row = $qry->fetch_assoc()):
-                
+              while($row = $qry->fetch_assoc()):  
       ?>
-
-      
-      
-      
                 <?php  ?>
-                <div class="w-100 px-2  " style="max-width: 330px; ">
+                <div class="w-100 px-2" style="max-width: 330px;">
 
           <!-- PRODUCT Card -->
                   <div class="card border-1 rounded-5 shadow-lg">
@@ -181,7 +176,7 @@ $('#myModal').on('shown.bs.modal', function () {
                       
                       
           <!-- PRODUCT Text -->
-                      <p style = "min-height: 50px; " class="mb-0 text-muted font-dosis fs-8">
+                      <p style = "min-height: 50px; text-overflow: ellipsis;" class="mb-0 text-muted font-dosis fs-8">
                         <?php echo $row['product_desc'] ?>
                       </p> 
                       

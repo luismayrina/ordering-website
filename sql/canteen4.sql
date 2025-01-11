@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 11:42 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Jan 11, 2025 at 02:59 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,13 +35,6 @@ CREATE TABLE `cart` (
   `User` varchar(45) NOT NULL,
   `restaurant_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`user_id`, `product_id`, `product_name`, `qty`, `User`, `restaurant_name`) VALUES
-(4, 1, 'Belgian Waffle', 1, '2020-2-02003', 'Waffle Time');
 
 -- --------------------------------------------------------
 
@@ -138,7 +131,8 @@ INSERT INTO `order_list` (`order_id`, `user_id`, `payment_method`, `total_amount
 (292, 4, 'gcash', 37.5, 'Cancelled', '2023-05-06 16:16:51', '2020-2-02003', ''),
 (293, 3, 'gcash', 85.99, 'Pending', '2023-05-08 08:09:19', '2020-2-00179', 'Turks'),
 (294, 1, 'gcash', 80, 'Pending', '2023-05-22 09:26:53', 'admin', 'Turks'),
-(295, 1, 'gcash', 160, 'Pending', '2023-05-22 09:27:57', 'admin', 'Turks');
+(295, 1, 'gcash', 160, 'Pending', '2023-05-22 09:27:57', 'admin', 'Turks'),
+(296, 4, 'cash', 688.5, 'Pending', '2025-01-10 15:52:37', '2020-2-02003', 'Turks');
 
 -- --------------------------------------------------------
 
@@ -371,7 +365,10 @@ INSERT INTO `order_products` (`ID`, `order_id`, `product_name`, `product_id`, `q
 (0, 292, 'Belgian Waffle', 1, 1, 38),
 (0, 293, 'Beef Pita', 8, 1, 86),
 (0, 294, 'Chicken Pita', 13, 1, 80),
-(0, 295, 'Chicken Pita', 13, 2, 80);
+(0, 295, 'Chicken Pita', 13, 2, 80),
+(0, 296, 'Beef Pita', 14, 1, 80),
+(0, 296, 'Beef Rice Bowl', 15, 1, 101),
+(0, 296, 'Chicken Rice Bowl', 19, 5, 102);
 
 -- --------------------------------------------------------
 
@@ -402,8 +399,13 @@ INSERT INTO `product_list` (`product_id`, `name`, `product_desc`, `price`, `rest
 (5, 'H&C Waffle', 'perfectly delicious ham & cheese ', 37, 'Waffle Time', 'Waffle Dogs', 0, 'hamcheesewaffle.jpg', 1, 72),
 (6, 'DBL CB', 'two 100% pure all beef patties seasoned with just a pinch of salt and pepper.', 65.75, 'Chowking', 'Burger', 1, 'burger.jpg', 0, 69),
 (7, 'Japanese Siomai with Rice and Drinks', 'comes with rice and drinks', 55.5, 'House of Dimsum', 'Siomai & Drinks ', 1, 'siomai.jpg', 0, 30),
-(13, 'Chicken Pita', 'Chicken', 80, 'Turks', 'Pita Doner Meals', 1, 'default.png', 1, 17),
-(14, 'Beef Pita', 'Beef', 80, 'Turks', 'Pita Doner Meals', 1, 'default.png', 1, 30);
+(13, 'Chicken Pita', 'Enjoy the irresistibly tender chicken and fresh ingredients in this wrap.', 80, 'Turks', 'Pita Doner Meals', 1, 'chicken-pita.jpg', 1, 17),
+(14, 'Beef Pita', 'Juicy beef wrapped in warm pita bread with fresh vegetables and sauce.', 80, 'Turks', 'Pita Doner Meals', 1, 'beef-pita.jpg', 1, 29),
+(15, 'Beef Rice Bowl', 'Beef rice bowl, a satisfying mix of rice and tender beef.', 101, 'Turks', 'Pita Doner Meals', 0, '678117e2307051.74753937.jpg', 1, 89),
+(16, 'Beef Rice Box', 'This rice box meal features tender beef cooked to perfection, served with rice for a flavorful meal.', 154, 'Turks', 'Rice Box', 1, 'beef-rice-box.jpg', 1, 100),
+(18, 'Bottled Water', '500 Grams', 30, 'Turks', 'Beverage', 0, 'bottled-water-turks.jpg', 1, 100),
+(19, 'Chicken Rice Bowl', 'Elevate your mealtime with this chicken rice bowl.', 101.5, 'Turks', 'Pita Doner Meals', 0, 'chicken-rice-bowl.jpg', 1, 79),
+(20, 'Chicken Rice Box', 'Convenient chicken rice box, ideal for a quick and hearty meal on the go.', 154, 'Turks', 'Rice Box', 0, 'chicken-rice-box.jpg', 1, 92);
 
 -- --------------------------------------------------------
 
@@ -427,14 +429,14 @@ CREATE TABLE `restaurant_list` (
 --
 
 INSERT INTO `restaurant_list` (`ID`, `Name`, `img_path`, `img_path2`, `target`, `avl`, `opening_time`, `closing_time`) VALUES
-(2, 'Turks', 'turks.png', '', 'Turks', 1, '06:00:00', '20:00:00'),
-(3, 'Chowking', 'chowking.png', '', 'Chowking', 0, '09:00:00', '17:00:00'),
-(14, 'Waffle Time', 'waffletime.png', '', 'Waffle Time', 0, '06:00:00', '17:00:00'),
-(17, 'KIMPOP', 'default.png', 'defaultbg.png', 'KIMPOP', 0, '06:00:00', '17:00:00'),
-(18, 'Ava Cakery', 'default.png', 'defaultbg.png', 'Ava Cakery', 0, '06:00:00', '17:00:00'),
-(20, 'House of Dimsum', '6450301a096889.88775503.jpg', 'defaultbg.png', 'House of Dimsum', 0, '06:00:00', '17:00:00'),
-(21, 'Kusina ni Tata Rod', 'default.png', '6450308985e5d8.26953357.jpg', 'Kusina ni Tata Rod', 0, '06:00:00', '17:00:00'),
-(22, 'Warm Fuzzies', 'default.png', 'defaultbg.png', 'Warm Fuzzies', 0, '06:00:00', '17:00:00');
+(2, 'Turks', 'turks.png', 'turks-cover.jpg', 'Turks', 0, '06:00:00', '23:59:00'),
+(3, 'Chowking', 'chowking.png', '', 'Chowking', 0, '09:00:00', '23:00:00'),
+(14, 'Waffle Time', 'waffletime.png', '', 'Waffle Time', 0, '06:00:00', '23:00:00'),
+(17, 'KIMPOP', 'default.png', 'defaultbg.png', 'KIMPOP', 0, '06:00:00', '23:00:00'),
+(18, 'Ava Cakery', 'default.png', 'defaultbg.png', 'Ava Cakery', 0, '06:00:00', '23:00:00'),
+(20, 'House of Dimsum', '6450301a096889.88775503.jpg', 'defaultbg.png', 'House of Dimsum', 0, '06:00:00', '23:00:00'),
+(21, 'Kusina ni Tata Rod', 'default.png', '6450308985e5d8.26953357.jpg', 'Kusina ni Tata Rod', 0, '06:00:00', '23:00:00'),
+(22, 'Warm Fuzzies', 'default.png', 'defaultbg.png', 'Warm Fuzzies', 0, '06:00:00', '23:00:00');
 
 --
 -- Indexes for dumped tables
@@ -481,13 +483,13 @@ ALTER TABLE `restaurant_list`
 -- AUTO_INCREMENT for table `order_list`
 --
 ALTER TABLE `order_list`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=296;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
 
 --
 -- AUTO_INCREMENT for table `product_list`
 --
 ALTER TABLE `product_list`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `restaurant_list`
